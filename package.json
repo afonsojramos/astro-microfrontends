@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build:apps": "pnpm --parallel --filter \"app-*\" build",
+    "serve:apps": "pnpm --parallel --filter \"app-*\" serve",
+    "build:shell": "pnpm --filter \"shell\" build",
+    "start:shell": "pnpm --filter \"shell\" start"
+  },
+  "packageManager": "pnpm@8.6.3"
+}

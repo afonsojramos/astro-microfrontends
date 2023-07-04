@@ -1,0 +1,25 @@
+/* Do not inject Tailwind's base styles to not break the other apps
+@tailwind base; */
+@tailwind components;
+@tailwind utilities;
+:root {
+  --accent: 124, 58, 237;
+  --accent-gradient: linear-gradient(
+    45deg,
+    rgb(var(--accent)),
+    #da62c4 30%,
+    white 60%
+  );
+  font-family: system-ui, sans-serif;
+  background-color: #f6f6f6;
+}
+
+.link-card-a {
+  transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.link-card-a > a > h2 {
+  transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}

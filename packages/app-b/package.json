@@ -1,0 +1,34 @@
+{
+  "name": "app-b",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3000",
+    "build": "vite build",
+    "serve": "vite preview --port 7200",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "4.0.0",
+    "vite": "4.3.9",
+    "vite-plugin-css-injected-by-js": "3.1.1"
+  },
+  "prettier": {
+    "printWidth": 120
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint -c .eslintrc.pre-commit.cjs --fix",
+      "prettier --cache --write",
+      "git add"
+    ],
+    "*.{css,md,html,json}": [
+      "prettier --cache --write",
+      "git add"
+    ]
+  }
+}
